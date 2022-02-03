@@ -211,7 +211,7 @@ plot2
 
 ##### Plot 3: GRÜNE Zweitstimmen nach Gebiet -----
 
-plot3 <- ggplot(data = filter(wk178_erststimme_prozent_long, Partei %in% "Grüne")) +
+plot3 <- ggplot(data = filter(wk178_zweitstimme_prozent_long, Partei %in% "Grüne")) +
   geom_point(aes(y = Gebiet, x = Prozent, color = Partei, alpha = Stimmen, size = Stimmen), stat = "identity") +
   geom_vline(xintercept = wk178_zweitstimme_gesamt$Grüne, 
              color = "#1ca42c",
